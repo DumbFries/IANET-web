@@ -1,0 +1,566 @@
+#header {
+  display: flex;
+  align-items: center;
+}
+#header #main-logo {
+  flex-grow: 32;
+  margin-left: 1em;
+}
+#header #main-logo img {
+  width: 80px;
+}
+#header #login {
+  flex-grow: 1;
+}
+#header #login img {
+  width: 40px;
+  transition: all 0.5s;
+}
+#header #login:hover img {
+  filter: invert(22%) sepia(5%) saturate(5650%) hue-rotate(110deg) brightness(93%) contrast(88%);
+}
+#header #logout {
+  flex-grow: 1;
+}
+#header #logout img {
+  width: 40px;
+  transition: all 0.5s;
+}
+#header #logout:hover img {
+  filter: invert(22%) sepia(5%) saturate(5650%) hue-rotate(110deg) brightness(93%) contrast(88%);
+}
+
+#navbar ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  height: 40px;
+  box-shadow: 0px 8px 30px #adabab;
+}
+#navbar ul li:nth-child(1) {
+  background: #F63631;
+  transition: all 200ms;
+}
+#navbar ul li:nth-child(1) a {
+  color: #fff;
+}
+#navbar ul li:hover:nth-child(1), #navbar ul li:hover:nth-child(2) {
+  background: #fff;
+}
+#navbar ul li:hover:nth-child(1) a, #navbar ul li:hover:nth-child(2) a {
+  color: #F63631;
+}
+#navbar ul li:nth-child(3) {
+  background: #164B39;
+}
+#navbar ul li:nth-child(3) a {
+  color: #fff;
+}
+#navbar ul li:hover:nth-child(3), #navbar ul li:hover:nth-child(4) {
+  background: #fff;
+}
+#navbar ul li:hover:nth-child(3) a, #navbar ul li:hover:nth-child(4) a {
+  color: #164B39;
+}
+#navbar ul li {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  transition: all 200ms;
+}
+#navbar ul li a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: Roboto;
+  text-decoration: none;
+  color: black;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+h3 {
+  font-family: Lato;
+}
+
+p {
+  font-family: Ubuntu;
+}
+
+.container-carrousel {
+  position: relative;
+}
+.container-carrousel .btn-left,
+.container-carrousel .btn-right {
+  display: flex;
+  position: absolute;
+  width: 1.4rem;
+  justify-content: center;
+  top: 50%;
+  background-color: rgba(51, 51, 51, 0.5058823529);
+  border-radius: 55%;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+.container-carrousel .btn-left img,
+.container-carrousel .btn-right img {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(317deg) brightness(112%) contrast(101%) opacity(50%);
+}
+.container-carrousel .btn-left:hover,
+.container-carrousel .btn-right:hover {
+  background-color: rgba(51, 51, 51, 0.831372549);
+}
+.container-carrousel .btn-left:hover img,
+.container-carrousel .btn-right:hover img {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(317deg) brightness(112%) contrast(101%) opacity(80%);
+}
+.container-carrousel .btn-left {
+  left: 10px;
+}
+.container-carrousel .btn-right {
+  right: 10px;
+}
+
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 300%;
+}
+.carrousel .slide1,
+.carrousel .slide2,
+.carrousel .slide3 {
+  display: flex;
+  align-items: center;
+  width: 33.3333333333%;
+}
+.carrousel .slide1 p,
+.carrousel .slide2 p,
+.carrousel .slide3 p {
+  font-size: 1.5em;
+  padding: 60px;
+  color: #164B39;
+  font-weight: 800;
+  text-align: 800;
+}
+.carrousel .slide1 img,
+.carrousel .slide2 img,
+.carrousel .slide3 img {
+  max-height: 500px;
+  object-fit: cover;
+}
+.carrousel .slide2 p {
+  color: #F63631;
+}
+.carrousel .slide3 p {
+  color: #333;
+}
+
+@keyframes transition {
+  0% {
+    transform: translate(2000px);
+  }
+}
+.ads-bar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #164B39;
+  position: relative;
+}
+.ads-bar .ads {
+  display: flex;
+  flex-flow: column wrap;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  padding-top: 25px;
+  transition: all ease-in 200ms;
+}
+.ads-bar img {
+  width: 50px;
+  margin-bottom: 5px;
+}
+.ads-bar h3 {
+  color: #fff;
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+.ads-bar p {
+  display: none;
+}
+
+.ads:hover {
+  background-color: #efe7e7;
+  height: 200px;
+}
+.ads:hover img {
+  filter: brightness(0) saturate(100%) invert(20%) sepia(38%) saturate(782%) hue-rotate(108deg) brightness(97%) contrast(88%);
+}
+.ads:hover h3 {
+  color: #164B39;
+}
+.ads:hover p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 97%;
+  height: 100px;
+  position: absolute;
+  top: 132px;
+  left: 0px;
+  background-color: #efe7e7;
+  box-shadow: 0px 10px 15px #ccc;
+  padding: 1.1em;
+  padding-top: 50px;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #164B39;
+}
+
+.feed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.feed-container h3 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #333;
+}
+.feed-container .feed {
+  border-right: 10px solid #2787dc;
+  border-left: 10px solid #2787dc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #ccc;
+}
+.feed-container .redirect-instagram {
+  display: flex;
+  align-items: center;
+  background-color: #F63631;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.feed-container .redirect-instagram a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 200;
+  font-size: 20px;
+  font-family: Roboto;
+}
+.feed-container .redirect-instagram:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 30px #ccc;
+}
+.feed-container .redirect-instagram:hover a {
+  color: #F63631;
+}
+.feed-container .redirect-instagram:hover img {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(64%) saturate(3444%) hue-rotate(344deg) brightness(99%) contrast(94%);
+}
+
+@keyframes mover-l {
+  0% {
+    transform: translate(100%);
+  }
+}
+.section-contact {
+  position: relative;
+  overflow: hidden;
+  background-color: #2787dc;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0px;
+  box-shadow: 0px 10px 10px #ccc;
+}
+.section-contact h3 {
+  font-size: 30px;
+}
+.section-contact p {
+  font-size: 22px;
+}
+.section-contact button {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  transition: 300ms;
+}
+.section-contact button a {
+  color: #2787dc;
+  font-size: 22px;
+  font-family: Roboto;
+  font-weight: 700;
+  text-decoration: none;
+}
+.section-contact .old-man {
+  position: absolute;
+  width: 500px;
+  top: -20px;
+  right: -100px;
+}
+.section-contact .open-envelope {
+  position: absolute;
+  width: 300px;
+  top: -20px;
+  left: -100px;
+  rotate: 20deg;
+  opacity: 80%;
+}
+
+.consult-calendar {
+  display: flex;
+  justify-content: space-around;
+}
+.consult-calendar h3 {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.consult-calendar .consult, .consult-calendar .calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 45%;
+}
+.consult-calendar .consult .text-red, .consult-calendar .calendar .text-red {
+  color: #F63631;
+}
+.consult-calendar .consult .text-green, .consult-calendar .calendar .text-green {
+  color: #164B39;
+}
+.consult-calendar .consult h3, .consult-calendar .calendar h3 {
+  font-size: 22px;
+}
+.consult-calendar .consult p, .consult-calendar .calendar p {
+  font-size: 1.1em;
+  font-weight: 800;
+  padding: 20px;
+}
+.consult-calendar .consult .doctor, .consult-calendar .calendar .doctor {
+  width: 450px;
+}
+.consult-calendar .consult img, .consult-calendar .calendar img {
+  width: 500px;
+  margin-bottom: 20px;
+  justify-self: center;
+}
+.consult-calendar .consult button, .consult-calendar .calendar button {
+  margin-top: 10px;
+  border: none;
+  padding: 15px;
+  box-shadow: 0px 10px 10px #ccc;
+  transition: 500ms;
+}
+.consult-calendar .consult button a, .consult-calendar .calendar button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Roboto;
+}
+.consult-calendar .consult .redirect-consult, .consult-calendar .calendar .redirect-consult {
+  background-color: #164B39;
+  transition: 500ms;
+}
+.consult-calendar .consult .redirect-consult:hover, .consult-calendar .consult .redirect-calendar:hover, .consult-calendar .calendar .redirect-consult:hover, .consult-calendar .calendar .redirect-calendar:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 20px #ccc;
+}
+.consult-calendar .consult .redirect-consult:hover a, .consult-calendar .consult .redirect-calendar:hover a, .consult-calendar .calendar .redirect-consult:hover a, .consult-calendar .calendar .redirect-calendar:hover a {
+  color: #164B39;
+  font-size: 18px;
+}
+.consult-calendar .consult .redirect-calendar, .consult-calendar .calendar .redirect-calendar {
+  background-color: #F63631;
+}
+.consult-calendar .consult .redirect-calendar:hover a, .consult-calendar .calendar .redirect-calendar:hover a {
+  color: #F63631;
+}
+.consult-calendar .consult .red-circle, .consult-calendar .consult .green-circle, .consult-calendar .calendar .red-circle, .consult-calendar .calendar .green-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #F63631;
+  box-shadow: 10px 0px 20px #ccc;
+  top: 125px;
+  right: 100px;
+  z-index: -1;
+}
+.consult-calendar .consult .green-circle, .consult-calendar .calendar .green-circle {
+  background-color: #164B39;
+  top: 135px;
+  left: 85px;
+}
+
+.section-about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F63631;
+  color: #fff;
+  margin-top: 100px;
+  text-align: center;
+  height: 700px;
+}
+.section-about h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.section-about p {
+  padding: 0px 80px;
+  font-size: 20px;
+}
+.section-about img {
+  width: 200px;
+  padding: 100px;
+}
+.section-about button {
+  background-color: #fff;
+  border: none;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: 300ms;
+}
+.section-about button a {
+  font-size: 22px;
+  font-family: Roboto;
+  font-weight: 700;
+  text-decoration: none;
+  color: #F63631;
+}
+
+button:hover {
+  border-radius: 10px;
+}
+button:hover a {
+  color: #333;
+}
+
+.section-about::before {
+  content: "";
+  position: absolute;
+  border-left: 1000px solid #333;
+  border-right: 1000px solid #333;
+  border-top: 100px solid transparent;
+  bottom: 0px;
+}
+
+.footer {
+  font-family: Lato;
+  width: 100%;
+  background-color: #333;
+  padding-top: 45px;
+}
+
+.footer .group-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.footer .group-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .group-1 .box figure img {
+  width: 200px;
+}
+
+.footer .group-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.footer .group-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.footer .group-1 .social-network a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #F63631;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.footer .group-1 .social-network a:hover {
+  background-color: #fff;
+  color: #F63631;
+}
+
+.footer .group-2 {
+  background-color: #334;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer .group-2 small {
+  font-size: 15px;
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .footer .group-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: Ubuntu;
+  src: url(../fonts/Ubuntu-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Bold.ttf) format("truetype");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #fff;
+  font-family: "Roboto";
+}
+
+/*# sourceMappingURL=style.css.map */

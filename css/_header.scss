@@ -1,0 +1,98 @@
+#header {
+    display: flex;
+    align-items: center;
+    #main-logo {
+        flex-grow: 32;
+        margin-left: 1em;
+
+        img {
+            width: 80px;
+        }
+    }
+
+    #login {
+        flex-grow: 1;
+
+        img {
+            width: 40px;
+            transition: all 0.5s;
+        }
+    }
+
+    #login:hover {
+        img {
+            filter: invert(22%) sepia(5%) saturate(5650%) hue-rotate(110deg) brightness(93%) contrast(88%);
+        }
+    }
+
+    #logout {
+        flex-grow: 1;
+
+        img {
+            width: 40px;
+            transition: all 0.5s;
+        }
+    }
+
+    #logout:hover {
+        img {
+            filter: invert(22%) sepia(5%) saturate(5650%) hue-rotate(110deg) brightness(93%) contrast(88%);
+        }
+    }
+}
+
+#navbar {
+    ul {
+        display: flex;
+        width: 100%;
+        list-style: none;
+        height: 40px;
+        box-shadow: 0px 8px 30px #adabab;
+        li:nth-child(1) {
+            background: #F63631;
+            a {
+                color: #fff;
+            }
+            transition: all 200ms;
+        }
+
+        li:hover:nth-child(1), li:hover:nth-child(2) {
+            background: #fff;
+            a {
+                color: #F63631;
+            }
+        }
+
+        li:nth-child(3) {
+            background: #164B39;
+            a {
+                color: #fff;
+            }
+        }
+
+        li:hover:nth-child(3), li:hover:nth-child(4) {
+            background: #fff;
+            a {
+                color: #164B39;
+            }
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            a {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                font-family: Roboto;
+                text-decoration: none;
+                color: black;
+            }
+            transition: all 200ms;
+        }
+
+        
+    }
+
+}
